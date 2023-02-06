@@ -14,8 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('profiles', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id()->primary();
+            $table->id('user_id');
+            $table->integer('height');
+            $table->integer('weight');
+            $table->boolean('gender');
+            $table->integer('age');
+            
+            //外部キー制約
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade');
         });
     }
 

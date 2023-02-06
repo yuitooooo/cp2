@@ -13,24 +13,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('clothes', function (Blueprint $table) {
-            
-            $table->integer('id')->primary();
-            $table->integer('category_id');
-            $table->boolean('gender_id');
-            $table->string('name');
-            $table->integer('price');
-            $table->string('url');
+        Schema::create('clothes__post', function (Blueprint $table) {
+            $table->id()->primary();
+            $table->Integer('clothes_id');
+            $table->string('post_id');
             
             //外部キー制約
-            $table->foreign('category_id')
+            $table->foreign('clothes_id')
                   ->references('id')
-                  ->on('categories')
+                  ->on('clothes')
                   ->onDelete('cascade');
                   
-            $table->foreign('gender_id')
+            $table->foreign('post_id')
                   ->references('id')
-                  ->on('genders')
+                  ->on('posts')
                   ->onDelete('cascade');
         });
     }
@@ -42,6 +38,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('clothes');
+        Schema::dropIfExists('clothes__posts');
     }
 };

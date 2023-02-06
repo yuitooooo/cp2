@@ -13,9 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
-            $table->id();
+        Schema::create('posts', function (Blueprint $table) 
+        {
+            //$table->id();
+            $table->string('id')->primary();
+            $table->integer('user_id');
+            $table->string('url');
             $table->timestamps();
+            $table->softDeletes();
+            
+            //外部キー制約
+            $table->foreign('user_id')
+                  ->references('id')
+                  ->on('users')
+                  ->onDelete('cascade')
+            
+           
         });
     }
 

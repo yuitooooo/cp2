@@ -14,8 +14,17 @@ return new class extends Migration
     public function up()
     {
         Schema::create('clothes__details', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+            $table->id()->primary();
+            $table->integer('clothes_id');
+            $table->string('size');
+            $table->string('color');
+            
+            //外部キー制約
+             $table->foreign('clothes_id')
+                  ->references('id')
+                  ->on('clothes')
+                  ->onDelete('cascade');
+                  
         });
     }
 
