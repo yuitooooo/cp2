@@ -15,9 +15,9 @@ return new class extends Migration
     {
         Schema::create('clothes', function (Blueprint $table) {
             
-            $table->integer('id')->primary();
-            $table->integer('category_id');
-            $table->boolean('gender_id');
+            $table->id();
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('gender_id');
             $table->string('name');
             $table->integer('price');
             $table->string('url');
