@@ -14,4 +14,9 @@ class Profiles extends Model
     protected $primaryKey = 'id';
     //オートインクリメント無効化
     public $incrementing = 'false';
+    
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

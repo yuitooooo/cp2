@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CP2Controller;
+
+
 
 
 /*
@@ -13,4 +17,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::controller(CP2Controller::class)->group(function(){
+    Route::get('/cp2/front','front')->name('front');
+    Route::get('/cp2/front/proposal','proposal')->name('proposal');
+    Route::get('/cp2/front/proposal/{post}','store')->name('store');
+});
 
