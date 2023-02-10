@@ -13,4 +13,9 @@ class Rating_Detail extends Model
     protected $primaryKey = 'id';
     //オートインクリメント無効化
     public $incrementing = 'false';
+    
+    public function clothes()
+    {
+        return $this->belongsTo(Clothes::class);
+    }
 }

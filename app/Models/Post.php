@@ -16,7 +16,18 @@ class Post extends Model
     //主キーカラム名を指定
     protected $primaryKey = 'id';
     //オートインクリメントを無効化
-    public $incrementing = false;
+    public $incrementing = 'false';
     
     protected $KeyType = 'string';
+    
+     public function clothes()
+     {
+         return $this->belongsToMany(Clothes::class);
+     }
+     
+     
+     public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

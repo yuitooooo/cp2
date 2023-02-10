@@ -14,4 +14,8 @@ class Gender extends Model
     //オートインクリメント無効化
     public $incrementing = 'false';
     
+    public function clothes()
+    {
+        return $this->hasMany(Clothes::class);
+    }
 }

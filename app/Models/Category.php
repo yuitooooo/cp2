@@ -12,5 +12,10 @@ class Category extends Model
     
     protected $primaryKey = 'id';
     
-    public $incrementing = false;
+    public $incrementing = 'false';
+    
+    public function clothes()
+    {
+        return $this->hasMany(Clothes::class);
+    }
 }
