@@ -39,4 +39,9 @@ class Clothes extends Model
     {
         return $this->belongsTo(Rating_Detail::class);
     }
+    
+    public function select_clothes()
+    {
+       
+    }
 }

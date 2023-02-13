@@ -18,4 +18,9 @@ class Category extends Model
     {
         return $this->hasMany(Clothes::class);
     }
+    
+    public function select_category()
+    {
+        
+    }
 }

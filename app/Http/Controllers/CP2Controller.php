@@ -15,7 +15,7 @@ class CP2Controller extends Controller
 {
     public function front(Category $category)
     {
-       return view('cp2/front')->with(['category' =>category->get()]);
+       return view('cp2/front')->with(['categories' =>$category->get()]);
     }
     
      public function budget_input(Request $request)
@@ -24,10 +24,22 @@ class CP2Controller extends Controller
         return view('cp2/front', compact('front'));
     }
  
+ 　 public function selection(Clothes $clothes Category $category)
+ 　 {
+ 　     $collection = 
+       $filtered = $collection->filter(function ()
+       {
+          return 
+           
+       )};
+       
+ 　 }
     
     public function proposal(Clothes $clothes)
     {
-        return view('cp2/proposal')->with(['clothes' =>clothes->get()]);
+        while 
+        
+        return view('cp2/proposal')->with(['clothes' =>$clothes->get()]);
     }
     
     public function showPage(Request $request)
