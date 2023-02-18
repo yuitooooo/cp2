@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Post;
 use App\Models\Clothes;
 use App\Models\Category;
+use Illuminate\Support\Facades\Validator;
 
 
 
@@ -23,21 +24,25 @@ class CP2Controller extends Controller
         $budget = $request->input('front');
         return view('cp2/front', compact('front'));
     }
- 
- 　 public function selection(Clothes $clothes Category $category)
- 　 {
- 　     $collection = 
-       $filtered = $collection->filter(function ()
-       {
-          return 
-           
-       )};
-       
- 　 }
     
-    public function proposal(Clothes $clothes)
+    public function proposal(Category $category, Request $request)
     {
-        while 
+        $validation_array = [
+            'checkbox' => 'required',
+        ];
+        
+        $validator = Validator::make($request->all(), $validation_array);
+        
+         if ($validator->fails()) {
+            return redirect('cp2/front')
+                        ->withErrors($validator)
+                        ->withInput();
+        };
+        
+        $checkbox_array = [];
+        foreach ($request->input('checkbox') as $value){
+        $checkbox_array[] = $value;
+        }
         
         return view('cp2/proposal')->with(['clothes' =>$clothes->get()]);
     }

@@ -18,4 +18,5 @@ class Rating_Detail extends Model
     {
         return $this->belongsTo(Clothes::class);
     }
+    
 }
