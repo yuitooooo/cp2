@@ -20,7 +20,7 @@ use App\Http\Controllers\CP2Controller;
 
 Route::controller(CP2Controller::class)->group(function(){
     Route::get('/cp2/front','front')->name('front');
-    Route::get('/cp2/front/proposal','proposal')->name('proposal');
-    Route::get('/cp2/front/proposal/{post}','store')->name('store');
+    Route::post('/cp2/front/proposal','proposal')->name('proposal');
+    Route::post('/cp2/front/proposal/{post}','store')->name('store');
 });
 

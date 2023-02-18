@@ -21,6 +21,18 @@ class Category extends Model
     
     public function select_category()
     {
-        
+       $category_data = DB::table('categories');
+
+       if(in_array( $checkbox_array))
+       {
+            $category_data->where(function ($q){
+                
+                $q->where('id','=',$checkbox_array);
+            })
+       }
+       
+
+      global $result_category[] = $category_data->get();
+      
     }
 }

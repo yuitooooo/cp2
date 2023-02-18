@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Collection;
 
 class Clothes extends Model
 {
@@ -40,8 +41,35 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function select_clothes()
+    public function selected()
     {
-       
+        
+    　 $n_checkbox=count($checkbox_array);
+    　 
+    　 $ca_budget={{ $budget }} / $n_checkbox;
+    　 
+    　 $collection = global $result_category[]
+    　 
+    　 
+    　 
+    　 $filtered = $collection->filter(function ($value, $key)
+    　 {
+         return $value < $ca_budget ;
+         
+     　});
+     　
+       global $result_selected[] = $filtered->all();
+     　
     }
+     　
+    public function rated()
+    {
+    
+       global $result_selected[]  = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
+        
+        return global $clothes; 
+        
+       global $clothes = Clothes::first();
+        
+    }    
 }
