@@ -25,7 +25,7 @@ class CP2Controller extends Controller
         return view('cp2/front', compact('front'));
     }
     
-    public function proposal(Category $category, Request $request)
+    public function proposal(Category $category, Request $request,Loop $loop)
     {
         $validation_array = [
             'checkbox' => 'required',
@@ -41,10 +41,10 @@ class CP2Controller extends Controller
         
         $checkbox_array = [];
         foreach ($request->input('checkbox') as $value){
-        $checkbox_array[] = $value;
+        $checkbox_array = $value;
         }
         
-        return view('cp2/proposal')->with(['clothes' =>$clothes->get()]);
+        return view('cp2/proposal')->with(['loop' =>$loop->get()]);
     }
     
     public function showPage(Request $request)

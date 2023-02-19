@@ -41,35 +41,47 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function selected()
+    public function loop(Selected $selected,Rated $rated)
     {
-        
-    　 $n_checkbox=count($checkbox_array);
+        while ( $budget  > 0 and $checkbox_array > 0)
+        {
+            $this->selected();
+            $this->rated();
+            
+        }
+        return $this->$clothes;
+    }
+    
+    public function selected(Proposal $proposal, Select_Category $select_category)
+    {
+       $n_checkbox=count($checkbox_array);
     　 
     　 $ca_budget={{ $budget }} / $n_checkbox;
     　 
-    　 $collection = global $result_category[]
+    　 $collection = $result_category_array;
     　 
     　 
     　 
-    　 $filtered = $collection->filter(function ($value, $key)
+    　 $filtered = $collection->filter(function ($value)
     　 {
          return $value < $ca_budget ;
          
      　});
      　
-       global $result_selected[] = $filtered->all();
+     　 $result_selected_array =[];
+        $result_selected_array = $filtered->all();
      　
     }
-     　
-    public function rated()
+    
+    public function rated(Selected $selected)
     {
     
-       global $result_selected[]  = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
+       $result_selected_array = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
         
-        return global $clothes; 
+        return $clothes; 
         
-       global $clothes = Clothes::first();
+       $clothes = Clothes::first();
         
-    }    
+    }   
+    
 }
