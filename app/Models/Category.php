@@ -27,12 +27,12 @@ class Category extends Model
        {
             $category_data->where(function ($q){
                 
-                $q->where('id','=',$checkbox_array);
+                $q->where('id','=',$checkbox_array[]);
             })
        }
        
-
-      global $result_category[] = $category_data->get();
+      $result_category_array = [];
+      $result_category_array = $category_data->get();
       
     }
 }
