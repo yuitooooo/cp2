@@ -10,7 +10,27 @@
 
     </head>
     <body class="antialiased">
-        <h1></h1>
-         
+        <h1>こんな服装はどうですか？</h1>
+        <div class ='clothes'>
+          <table class="table table-striped">
+            <thead>
+             <tr>
+              <th>カテゴリ</th>
+              <th>値段</th>
+              <th>商品URL</th>
+            </tr>
+           </thead>
+           <tbody>
+           @foreach ($clothes as $clothes)
+           <tr>
+           <td>{{ $clothes->category_id }}</td>
+           <td>{{ $clothes->price }}</td>
+           <td>{{ $clothes->url }}</td>
+           </tr>
+           @endforeach
+           
+                    <h2>
+                        <a href ='https://www.uniqlo.com/jp/ja/'></a>
+                    </h2>
     </body>
 </html>
