@@ -41,7 +41,7 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function loop(Selected $selected,Rated $rated)
+    public function repeat(Selected $selected,Rated $rated)
     {
         while ( $budget  > 0 and $checkbox_array > 0)
         {
@@ -49,14 +49,16 @@ class Clothes extends Model
             $this->rated();
             
         }
+        $clothes = [];
         return $this->$clothes;
+        
     }
     
     public function selected(Proposal $proposal, Select_Category $select_category)
     {
        $n_checkbox=count($checkbox_array);
     　 
-    　 $ca_budget={{ $budget }} / $n_checkbox;
+    　 $ca_budget=　{{ $budget }} / $n_checkbox;
     　 
     　 $collection = $result_category_array;
     　 
