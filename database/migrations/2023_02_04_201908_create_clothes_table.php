@@ -19,6 +19,7 @@ return new class extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('gender_id');
             $table->string('name');
+            $table->integer('number');
             $table->integer('price');
             $table->string('url');
             

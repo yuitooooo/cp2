@@ -23,7 +23,7 @@
            <tbody>
            @foreach ($clothes as $clothes)
            <tr>
-           <td>{{ $clothes->category_id }}</td>
+           <td>{{ $clothes->category->name }}</td>
            <td>{{ $clothes->price }}</td>
            <td>{{ $clothes->url }}</td>
            </tr>

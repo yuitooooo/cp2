@@ -49,8 +49,8 @@ class Clothes extends Model
             $this->rated();
             
         }
-        $clothes = [];
-        return $this->$clothes;
+        $clothes_result = [];
+        return $this->$clothes_result;
         
     }
     
@@ -58,15 +58,17 @@ class Clothes extends Model
     {
        $n_checkbox=count($checkbox_array);
     　 
-    　 $ca_budget=　{{ $budget }} / $n_checkbox;
+    　 $ca_budget = {{ $budget }} / $n_checkbox;
     　 
     　 $collection = $result_category_array;
     　 
+    　 $avr_each_category=
     　 
     　 
-    　 $filtered = $collection->filter(function ($value)
+    　 
+    　 $filtered = $collection->filter(function ()
     　 {
-         return $value < $ca_budget ;
+         return  < $ca_budget ;
          
      　});
      　
@@ -80,9 +82,9 @@ class Clothes extends Model
     
        $result_selected_array = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
         
-        return $clothes; 
+        return $clothes_result; 
         
-       $clothes = Clothes::first();
+       $clothes_result = Clothes::first();
         
     }   
     

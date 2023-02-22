@@ -14,6 +14,10 @@ class PostRequest extends FormRequest
    
     public function rules()
     {
+        $validation_array = [
+            'checkbox' => 'required',
+        ];
+        
         
     }
 }
