@@ -28,7 +28,7 @@ class Category extends Model
             $category_data->where(function ($q){
                 
                 $q->where('id','=',$checkbox_array[]);
-            })
+            });
        }
        
       $result_category_array = [];

@@ -14,24 +14,9 @@ use Illuminate\Support\Facades\Validator;
 
 class CP2Controller extends Controller
 {
-    public function front(Category $category)
+    public function front(Category $category, CP2Request $request)
     {
-       return view('cp2/front')->with(['categories' =>$category->get()]);
-    }
-    
-     public function budget_input(Request $request)
-     {
-        $budget = $request->input('front');
-        return view('cp2/front', compact('front'));
-    }
-    
-    public function proposal(Category $category, Request $request,Repeat $repeat)
-    {
-        $validation_array = [
-            'checkbox' => 'required',
-        ];
-        
-        $validator = Validator::make($request->all(), $validation_array);
+       $validator = Validator::make($request->all(), $validation_array);
         
          if ($validator->fails()) {
             return redirect('cp2/front')
@@ -43,7 +28,17 @@ class CP2Controller extends Controller
         foreach ($request->input('checkbox') as $value){
         $checkbox_array = $value;
         }
-        
+       return view('cp2/front')->with(['categories' =>$category->get()]);
+    }
+    
+     public function budget_input(CP2Request $request)
+     {
+        $budget = $request->input('front');
+        return view('cp2/front', compact('front'));
+    }
+    
+    public function proposal(Category $category,Repeat $repeat)
+    {
         return view('cp2/proposal')->with(['repeat' =>$repeat->get()]);
     }
     
