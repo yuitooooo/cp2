@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
+use Illuminate\Http\Request;
 
 class Clothes extends Model
 {
@@ -43,7 +44,7 @@ class Clothes extends Model
     
     public function repeat(Selected $selected,Rated $rated)
     {
-        while ( $budget  > 0 and $checkbox_array > 0)
+        while ( $budget  > 0 and $_array > 0)
         {
             $this->selected();
             $this->rated();
@@ -54,27 +55,44 @@ class Clothes extends Model
         
     }
     
-    public function selected(Proposal $proposal, Select_Category $select_category)
+    public function select(Proposal $proposal, Select_Category $select_category, Budget_Input $budget_input)
     {
-       $n_checkbox=count($checkbox_array);
-    　 
-    　 $ca_budget = {{ $budget }} / $n_checkbox;
-    　 
-    　 $collection = $result_category_array;
-    　 
-    　 $avr_each_category=
-    　 
-    　 
-    　 
-    　 $filtered = $collection->filter(function ()
-    　 {
-         return  < $ca_budget ;
-         
-     　});
-     　
-     　 $result_selected_array =[];
-        $result_selected_array = $filtered->all();
-     　
+       $n_checkbox = count($checkbox_array);
+       
+       $ca_budget =  $budget  / $n_checkbox;
+       
+       $collection = $result_category_array;
+       
+       $select_array = [];
+       
+       $average_price = Clothes::select('category_id')
+                        ->selectRaw('AVG(price as a_price')
+                        ->groupBy('category_id')
+                        ->get();
+                        
+                        
+        foreach ($collection as $v){ 
+            
+            if ($average_price < $ca_budget and $v['price'] < $ca_budget){ 
+                
+            $select_array = $v ;   
+            
+            }elseif($average_price > $ca_budget){ 
+            
+                $ca_budget = $average_price; 
+            
+                if($v['price'] < $ca_budget){ 
+                
+                    $select_array = $v; 
+                } 
+            
+            }
+            
+        }
+       $result_selected_array = [];
+       
+       $result_selected_array [] = $select_array;
+        
     }
     
     public function rated(Selected $selected)
@@ -82,10 +100,8 @@ class Clothes extends Model
     
        $result_selected_array = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
         
-        return $clothes_result; 
+        return $ratings_result; 
         
-       $clothes_result = Clothes::first();
+       $ratings_result = Clothes::first();
         
     }   
-    
-}

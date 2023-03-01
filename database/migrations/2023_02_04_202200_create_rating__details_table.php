@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('clothes_id');
             $table->float('customer_rate',3,2);
-            $table->integer('hot_selling');
-            $table->integer('favorite');
+            $table->integer('hot_selling')->nullable();
+            $table->integer('favorite')->nullable();
             
             //外部キー制約
           $table->foreign('clothes_id')

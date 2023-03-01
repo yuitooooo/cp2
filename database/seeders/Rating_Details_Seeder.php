@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class Rating_Details_Seeder extends Seeder
 {
@@ -16,8 +17,6 @@ class Rating_Details_Seeder extends Seeder
     {
          DB::table('rating_details')->insert([
                 'customer_rate' => '',
-                'hot_selling'=> '',
-                'favorite'=> '',
                 'clothes_id'=>'',
             ]);
     }
