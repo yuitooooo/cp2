@@ -25,7 +25,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450195',
                 'name' => 'フリースフルジップジャケット（長袖）',
                 'price' => '2990',
@@ -55,7 +55,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '449628',
                 'name' => 'ヒートテックウォームパデッドベスト',
                 'price' => '4990',
@@ -65,7 +65,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '449613',
                 'name' => 'ポケッタブルUVカットパーカ（3Dカット）',
                 'price' => '3990',
@@ -85,7 +85,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '453776',
                 'name' => 'デニムジャケット',
                 'price' => '4990',
@@ -105,7 +105,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '457986',
                 'name' => 'オーバーサイズユーティリティジャケット',
                 'price' => '7990',
@@ -125,7 +125,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '455402',
                 'name' => 'スウェットカーディガン（長袖）',
                 'price' => '3990',
@@ -145,7 +145,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '453763',
                 'name' => 'ウォッシャブルミラノリブVネックカーディガン',
                 'price' => '3990',
@@ -165,7 +165,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '457087',
                 'name' => 'スウェットプルパーカ',
                 'price' => '3990',
@@ -175,7 +175,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-           DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456971',
                 'name' => 'ライトウエイトスウェットシャツ（長袖）',
                 'price' => '2990',
@@ -195,7 +195,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '455395',
                 'name' => 'スウェットプルパーカ（長袖）セットアップ可能',
                 'price' => '3990',
@@ -215,7 +215,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '458468',
                 'name' => 'スウェットプルパーカ（長袖・欧米仕様）',
                 'price' => '3990',
@@ -235,7 +235,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '457425',
                 'name' => 'エクストラファインコットンオーバーサイズスタンドカラーシャツ（長袖）',
                 'price' => '2990',
@@ -255,7 +255,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450267',
                 'name' => 'フランネルシャツ（ボタンダウンカラー・長袖）',
                 'price' => '2990',
@@ -275,7 +275,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '444645',
                 'name' => 'オープンカラーシャツ（半袖）',
                 'price' => '2990',
@@ -295,7 +295,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '444754',
                 'name' => 'リネンコットンスタンドカラーシャツ（半袖）',
                 'price' => '1990',
@@ -315,7 +315,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '455962',
                 'name' => 'オーバーサイズシャツ（長袖）',
                 'price' => '3990',
@@ -326,7 +326,7 @@ class Clothes_Seeder extends Seeder
          ]);
          
          DB::table('clothes')->insert([
-                'number' => '4530002',
+                'number' => '453002',
                 'name' => 'スマートアンクルパンツ2WAYストレッチ（ウールライク・丈標準64.5～70.5cm）',
                 'price' => '3990',
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444598-000/00?colorDisplayCode=09&sizeDisplayCode=005',
@@ -335,7 +335,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '455480',
                 'name' => 'レギュラーフィットジーンズ',
                 'price' => '4990',
@@ -355,7 +355,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '457619',
                 'name' => '感動パンツ2WAYストレッチ（ウールライク・丈70・73・76・85cm）セットアップ可能',
                 'price' => '3990',
@@ -375,7 +375,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '457574',
                 'name' => 'ワイドフィットジーンズ（丈標準74～77cm）',
                 'price' => '3990',
@@ -405,7 +405,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456352',
                 'name' => 'ワイドフィットワークパンツ（デニム・丈標準71～77cm）',
                 'price' => '1990',
@@ -425,7 +425,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450198',
                 'name' => 'ファーリーフリースフルジップジャケット（長袖）',
                 'price' => '1990',
@@ -445,7 +445,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450534',
                 'name' => 'ブラッシュドジャージーシャツジャケット セットアップ可能',
                 'price' => '1990',
@@ -485,7 +485,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450530',
                 'name' => 'コットンブレンドパーカ',
                 'price' => '3990',
@@ -505,7 +505,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '454761',
                 'name' => 'ニットショートジャケット（長袖）',
                 'price' => '3990',
@@ -525,7 +525,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450635',
                 'name' => '3Dカシミヤクルーネックセーター（長袖）',
                 'price' => '7990',
@@ -565,7 +565,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '454766',
                 'name' => 'UVカットⅤネックロングカーディガン（長袖）',
                 'price' => '2990',
@@ -585,7 +585,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456158',
                 'name' => 'UVカットシャツ（長袖）',
                 'price' => '2990',
@@ -605,7 +605,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '451686',
                 'name' => '3Dスフレヤーンカーディガン（長袖）',
                 'price' => '2990',
@@ -645,7 +645,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '446846',
                 'name' => 'レーヨンブラウス（半袖）',
                 'price' => '2990',
@@ -665,7 +665,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '445455',
                 'name' => 'リネンブレンドオープンカラーシャツ（半袖）',
                 'price' => '1990',
@@ -685,7 +685,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '458429',
                 'name' => 'スーピマコットンストレッチシャツ（長袖）',
                 'price' => '2990',
@@ -705,7 +705,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-           DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '447814',
                 'name' => 'コットンシャツ（5分袖）',
                 'price' => '1990',
@@ -725,7 +725,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '452898',
                 'name' => 'エアリズムコットンロングフレアワンピース（半袖・標準丈・113～124cm）',
                 'price' => '2990',
@@ -745,7 +745,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '452073',
                 'name' => 'Vネックサロペット',
                 'price' => '2990',
@@ -765,7 +765,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '451753',
                 'name' => 'キャミソールフレアワンピース（標準丈・116～126cm）',
                 'price' => '3990',
@@ -805,7 +805,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '454310',
                 'name' => 'エアリズムコットンロングフレアワンピース（半袖・丈短め・108～119cm）',
                 'price' => '1990',
@@ -825,7 +825,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '443906',
                 'name' => 'ウルトラストレッチハイライズデニムレギンスパンツ（丈長め74～76cm）',
                 'price' => '1990',
@@ -845,7 +845,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '461622',
                 'name' => 'スマートアンクルパンツ（グレンチェック・2WAYストレッチ・テーパード・標準丈64～66cm）',
                 'price' => '3990',
@@ -875,7 +875,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456193',
                 'name' => 'イージーフレアレギンスパンツ（丈標準70～72cm）',
                 'price' => '2990',
@@ -895,7 +895,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '450600',
                 'name' => 'ウルトラストレッチハイライズレギンスパンツ（丈長め74～76cm）',
                 'price' => '1990',
@@ -915,7 +915,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '454350',
                 'name' => 'バギージーンズ（丈標準76cm）',
                 'price' => '3990',
@@ -955,7 +955,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '445974',
                 'name' => 'マーメイドロングスカート（丈標準84～88cm）',
                 'price' => '2990',
@@ -975,7 +975,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456094',
                 'name' => 'コットンフレアミディスカート（丈標準75～79cm）',
                 'price' => '3990',
@@ -995,7 +995,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-          DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '458287',
                 'name' => 'ストレッチダブルフェイススリットスカート（丈短め69～73cm）',
                 'price' => '2990',
@@ -1015,7 +1015,7 @@ class Clothes_Seeder extends Seeder
                 
          ]);
          
-           DB::table('clothes')->insert([
+         DB::table('clothes')->insert([
                 'number' => '456476',
                 'name' => 'ストレッチタイトスカート（ミドル丈・56～58cm）セットアップ可能',
                 'price' => '2990',
