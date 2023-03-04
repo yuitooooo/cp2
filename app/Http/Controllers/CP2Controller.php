@@ -14,20 +14,8 @@ use Illuminate\Support\Facades\Validator;
 
 class CP2Controller extends Controller
 {
-    public function front(Category $category, CP2Request $request)
+    public function front(Category $category)
     {
-       $validator = Validator::make($request->all(), $validation_array);
-        
-         if ($validator->fails()) {
-            return redirect('cp2/front')
-                        ->withErrors($validator)
-                        ->withInput();
-        };
-        
-        $checkbox_array = [];
-        foreach ($request->input('checkbox') as $value){
-        $checkbox_array = $value;
-        }
        return view('cp2/front')->with(['categories' =>$category->get()]);
     }
     
@@ -37,15 +25,22 @@ class CP2Controller extends Controller
         return view('cp2/front', compact('front'));
     }
     
-    public function proposal(Category $category,Repeat $repeat)
+    public function proposal(Category $category,Clothes $clothes ,CP2Request $request)
     {
-        return view('cp2/proposal')->with(['repeat' =>$repeat->get()]);
+        $validator = Validator::make($request->all(), $validation_array);
+        
+        $checkbox_array = [];
+        foreach ($request->input('checkbox') as $value){
+        $checkbox_array = $value;
+        }
+        
+        return view('proposal')->with(['clothes' => $clothes->$proposal_groups->get()]);
     }
     
-    public function showPage(Request $request)
+    public function show_budget(Request $request)
     {
         $budget = $request->input('budget');
-        return view('cp2/proposal', compact('budget'));
+        return view('proposal', compact('budget'));
     }
     
     

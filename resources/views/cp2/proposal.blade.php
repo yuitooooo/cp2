@@ -11,6 +11,7 @@
     </head>
     <body class="antialiased">
         <h1>こんな服装はどうですか？</h1>
+        <h2>予算:{{ $budget }}</h2>
         <div class ='clothes'>
           <table class="table table-striped">
             <thead>
@@ -28,6 +29,7 @@
            <td>{{ $clothes->url }}</td>
            </tr>
            @endforeach
+           
            
                     <h2>
                         <a href ='https://www.uniqlo.com/jp/ja/'></a>

@@ -20,7 +20,7 @@
             <input name="category[{{$category->id}}]" 
                    type="checkbox" 
                    value="{{ $category->id }}" 
-                   {{ old('category.'.$category->id) == $category->id) ? 'checked' : '' }}>
+                   {{ old(('category.'.$category->id) == $category->id) ? 'checked' : '' }}>
             <label class="form-check-label">{{ $category->name }}</label>
             </div>
             @endforeach

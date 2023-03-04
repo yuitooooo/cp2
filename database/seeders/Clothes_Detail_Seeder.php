@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class Clothes_Details_Seeder extends Seeder
+class Clothes_Detail_Seeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,7 +15,7 @@ class Clothes_Details_Seeder extends Seeder
      */
     public function run()
     {
-        DB::table('clothes_details')->insert([
+         DB::table('clothes_details')->insert([
                 'size' => '',
                 'color'=> '',
                 'clothes_id'=> '',

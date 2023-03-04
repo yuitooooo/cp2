@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
-use Illuminate\Http\Request;
+use App\Http\Controllers\CP2Controllers;
 
 class Clothes extends Model
 {
@@ -42,24 +42,23 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function repeat(Selected $selected,Rated $rated)
+    public function repeat(Select $select,Rated $rated)
     {
-        while ( $budget  > 0 and $_array > 0)
+        while ( $budget  > 0 and $ratings_result === $n_checkbox)
         {
             $this->selected();
             $this->rated();
-            
         }
-        $clothes_result = [];
-        return $this->$clothes_result;
+        
+        return $this->proposal_groups;
         
     }
     
-    public function select(Proposal $proposal, Select_Category $select_category, Budget_Input $budget_input)
+    public function select(Proposal $proposal, Select_Category $select_category, Show_Budget $show_budget)
     {
        $n_checkbox = count($checkbox_array);
        
-       $ca_budget =  $budget  / $n_checkbox;
+       $ca_budget =  $budget / $n_checkbox;
        
        $collection = $result_category_array;
        
@@ -91,17 +90,47 @@ class Clothes extends Model
         }
        $result_selected_array = [];
        
-       $result_selected_array [] = $select_array;
+       $result_selected_array  = $select_array;
         
     }
-    
-    public function rated(Selected $selected)
-    {
-    
-       $result_selected_array = Clothes::withCount('customer_rate')->orderBy('Rating_Detail_count', 'desc')->paginate();
-        
-        return $ratings_result; 
-        
-       $ratings_result = Clothes::first();
-        
-    }   
+     
+    public function rated(Select $select)
+     {
+         
+      function array_group_by(array $categories, $keyName)
+      {
+        $groups = [];
+        foreach ($categories as $category) {
+        $key = $category[$keyName];
+        if (array_key_exists($key, $groups)) {
+            $groups[$key][] = $category;
+        } else {
+            $groups[$key] = [$category];
+        }
+        }
+          return $groups;
+      }
+       assert(array_group_by($result_selected_array, 'category') === $grouped);
+      
+       $groups_array = $grouped->toArray();
+       
+       $ratings = array_column($groups_array, 'customer_rate');
+       
+       $rated_array = array_multisort($ratings,SORT_DESC,$groups_array);
+       
+       $proposal_groups = [];
+       
+        foreach ($rated_array as $key=>$v){
+            $proposal_groups = $v['category_id']->array_shift();
+        }
+
+     }
+       
+     
+     
+}   
+       
+       
+       
+       
+       

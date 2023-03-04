@@ -13,18 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rating__details', function (Blueprint $table) {
+        Schema::create('clothes_details', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('clothes_id');
-            $table->float('customer_rate',3,2);
-            $table->integer('hot_selling')->nullable();
-            $table->integer('favorite')->nullable();
+            $table->string('size');
+            $table->string('color');
             
             //外部キー制約
-          $table->foreign('clothes_id')
-                ->references('id')
-                ->on('clothes')
-                ->onDelete('cascade');
+             $table->foreign('clothes_id')
+                  ->references('id')
+                  ->on('clothes')
+                  ->onDelete('cascade');
+                  
         });
     }
 
@@ -35,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rating__details');
+        Schema::dropIfExists('clothes__details');
     }
 };
