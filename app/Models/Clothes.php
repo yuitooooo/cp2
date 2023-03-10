@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use App\Http\Controllers\CP2Controllers;
+use App\Http\Requests\CP2Request;
 
 class Clothes extends Model
 {
@@ -42,19 +43,7 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function repeat(Select $select,Rated $rated)
-    {
-        while ( $budget  > 0 and $ratings_result === $n_checkbox)
-        {
-            $this->selected();
-            $this->rated();
-        }
-        
-        return $this->proposal_groups;
-        
-    }
-    
-    public function select(Proposal $proposal, Select_Category $select_category, Show_Budget $show_budget)
+    public function select(Proposal $proposal, Select_Category $select_category)
     {
        $n_checkbox = count($checkbox_array);
        
@@ -71,17 +60,11 @@ class Clothes extends Model
                         
                         
         foreach ($collection as $v){ 
-            
             if ($average_price < $ca_budget and $v['price'] < $ca_budget){ 
-                
             $select_array = $v ;   
-            
             }elseif($average_price > $ca_budget){ 
-            
                 $ca_budget = $average_price; 
-            
                 if($v['price'] < $ca_budget){ 
-                
                     $select_array = $v; 
                 } 
             
@@ -126,6 +109,18 @@ class Clothes extends Model
 
      }
        
+   public function repeat(Select_Category $select_category,Select $select,Rated $rated)
+    {
+        while ( $budget  > 0 and $ratings_result === $n_checkbox)
+        {
+            $this->select_category();
+            $this->selected();
+            $this->rated();
+        }
+        
+        return $this->$proposal_groups;
+        
+    }
      
      
 }   

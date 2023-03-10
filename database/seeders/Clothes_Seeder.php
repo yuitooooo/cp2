@@ -456,16 +456,6 @@ class Clothes_Seeder extends Seeder
          ]);
          
          DB::table('clothes')->insert([
-                'number' => '457106',
-                'name' => 'ウォームパデッドベスト',
-                'price' => '2990',
-                'url' => 'https://www.uniqlo.com/jp/ja/products/E457106-000/00?colorDisplayCode=11&sizeDisplayCode=005',
-                'category_id' => 1,
-                'gender_id' => 2,
-                
-         ]);
-         
-         DB::table('clothes')->insert([
                 'number' => '455944',
                 'name' => 'コットンブルゾン',
                 'price' => '2990',
@@ -486,16 +476,6 @@ class Clothes_Seeder extends Seeder
          ]);
          
          DB::table('clothes')->insert([
-                'number' => '450530',
-                'name' => 'コットンブレンドパーカ',
-                'price' => '3990',
-                'url' => 'https://www.uniqlo.com/jp/ja/products/E450530-000/00?colorDisplayCode=27&sizeDisplayCode=005',
-                'category_id' => 1,
-                'gender_id' => 2,
-                
-         ]);
-         
-         DB::table('clothes')->insert([
                 'number' => '450314',
                 'name' => 'ウォームパデッドキルティングジャケット',
                 'price' => '3990',
@@ -510,16 +490,6 @@ class Clothes_Seeder extends Seeder
                 'name' => 'ニットショートジャケット（長袖）',
                 'price' => '3990',
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E454761-000/00?colorDisplayCode=63&sizeDisplayCode=005',
-                'category_id' => 1,
-                'gender_id' => 2,
-                
-         ]);
-         
-         DB::table('clothes')->insert([
-                'number' => '450453',
-                'name' => 'ウルトラライトダウンリラックスジャケット',
-                'price' => '4990',
-                'url' => 'https://www.uniqlo.com/jp/ja/products/E450453-000/00?colorDisplayCode=33&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 2,
                 
@@ -800,16 +770,6 @@ class Clothes_Seeder extends Seeder
                 'name' => 'クルーネックTワンピース（半袖）',
                 'price' => '1500',
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447081-000/00?colorDisplayCode=08&sizeDisplayCode=004',
-                'category_id' => 4,
-                'gender_id' => 2,
-                
-         ]);
-         
-         DB::table('clothes')->insert([
-                'number' => '454310',
-                'name' => 'エアリズムコットンロングフレアワンピース（半袖・丈短め・108～119cm）',
-                'price' => '1990',
-                'url' => 'https://www.uniqlo.com/jp/ja/products/E448069-000/01?colorDisplayCode=58&sizeDisplayCode=007',
                 'category_id' => 4,
                 'gender_id' => 2,
                 

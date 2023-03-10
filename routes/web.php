@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\CP2Controller;
+use Illuminate\Http\Request;
 
 
 
@@ -19,8 +20,8 @@ use App\Http\Controllers\CP2Controller;
 */
 
 Route::controller(CP2Controller::class)->group(function(){
+    Route::get('/cp2/proposal','proposal')->name('proposal');
     Route::get('/cp2/front','front')->name('front');
-    Route::get('/proposal','proposal','showpage')->name('proposal');
+    Route::post('/cp2/proposal','proposal')->name('proposal');
     Route::post('/cp2/proposal/{post}','store')->name('store');
 });
-

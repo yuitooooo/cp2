@@ -11,7 +11,7 @@
     </head>
     <body class="antialiased">
         <h1>こんな服装はどうですか？</h1>
-        <h2>予算:{{ $budget }}</h2>
+        <h3>{{ $budget }}</h3>
         <div class ='clothes'>
           <table class="table table-striped">
             <thead>
@@ -25,7 +25,7 @@
            @foreach ($clothes as $clothes)
            <tr>
            <td>{{ $clothes->category->name }}</td>
-           <td>{{ $clothes->price }}</td>
+           <td>{{ $clothes->name }}</td>
            <td>{{ $clothes->url }}</td>
            </tr>
            @endforeach
