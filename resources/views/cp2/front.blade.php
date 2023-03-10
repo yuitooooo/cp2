@@ -10,19 +10,26 @@
     <body class="antialiased">
         <div>さん</div>
         <h1>一緒に服選びしてみませんか？</h1>
-            <h2>予算を入力してください</h2>
-            {{Form::open(['method' => 'get', 'url' => 'proposal'])}}
-                <p>予算：{{Form::number('budget', '', ['id' => 'budget'])}}</p>
-                <p>{{ Form::button('入力', ['type' => 'submit'])}}</p>
-            {{Form::close()}}
+          <form action="/cp2/proposal" method='POST'>
+              @csrf
+            <h2>カテゴリを選択してください</h2>
             @foreach ($categories as $category)
             <div class="form-check">
-            <input name="category[{{$category->id}}]" 
+            <input name="checkbox_array[]" 
                    type="checkbox" 
                    value="{{ $category->id }}" 
                    {{ old(('category.'.$category->id) == $category->id) ? 'checked' : '' }}>
             <label class="form-check-label">{{ $category->name }}</label>
             </div>
             @endforeach
+            <h2>予算を入力してください</h2>
+           
+                予算:<br>
+                <input name='budget'>
+                <br>
+                <input type='submit' value='検索'>
+                <a href='/cp2/proposal'></a>
+                <!--<button href='/cp2/proposal'>検索</button>-->
+            </form>
     </body>
 </html>

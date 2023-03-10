@@ -14,10 +14,9 @@ class CP2Request extends FormRequest
    
     public function rules()
     {
-        return [
+        return[
             'checkbox' => 'required',
-        ];
-        
-        
+            'budget'   => 'required',
+              ];
     }
 }
