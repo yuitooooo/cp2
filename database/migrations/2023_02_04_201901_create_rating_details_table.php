@@ -15,17 +15,11 @@ return new class extends Migration
     {
         Schema::create('rating_details', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('clothes_id');
             $table->float('customer_rate',2,1);
             $table->integer('number_review')->nullable();
             $table->integer('hot_selling')->nullable();
             $table->integer('favorite')->nullable();
             
-            //外部キー制約
-          $table->foreign('clothes_id')
-                ->references('id')
-                ->on('clothes')
-                ->onDelete('cascade');
         });
     }
 
@@ -36,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rating__details');
+        Schema::dropIfExists('rating_details');
     }
 };

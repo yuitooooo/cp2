@@ -17,8 +17,9 @@ class DatabaseSeeder extends Seeder
        $this->call([
                Category_Seeder::class,
                Gender_Seeder::class,
-               Clothes_Seeder::class,
                Rating_Detail_Seeder::class,
+               Clothes_Seeder::class,
+               
        ]);
     }
 }
