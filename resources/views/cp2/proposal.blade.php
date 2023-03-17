@@ -11,7 +11,7 @@
     </head>
     <body class="antialiased">
         <h1>こんな服装はどうですか？</h1>
-        <h3>{{ $budget }}</h3>
+        <h3>予算:{{ $budget }}</h3>
         <div class ='clothes'>
           <table class="table table-striped">
             <thead>

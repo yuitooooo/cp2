@@ -18,6 +18,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('gender_id');
+            $table->unsignedBigInteger('rating_detail_id');
             $table->string('name');
             $table->integer('number');
             $table->integer('price');
@@ -32,6 +33,11 @@ return new class extends Migration
             $table->foreign('gender_id')
                   ->references('id')
                   ->on('genders')
+                  ->onDelete('cascade');
+            
+             $table->foreign('rating_detail_id')
+                  ->references('id')
+                  ->on('rating_details')
                   ->onDelete('cascade');
         });
     }

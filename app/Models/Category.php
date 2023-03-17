@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
-use App\Http\Requests\CP2Request;
+use Illuminate\Support\Facades\DB;
 
 class Category extends Model
 {
@@ -19,22 +19,5 @@ class Category extends Model
     public function clothes()
     {
         return $this->hasMany(Clothes::class);
-    }
-    
-    public function select_category()
-    {
-       $category_data = DB::table('categories');
-
-       if(in_array( $checkbox_array))
-       {
-            $category_data->where(function ($q){
-                
-                $q->where('id','=',$checkbox_array[]);
-            });
-       }
-       
-      $result_category_array = [];
-      $result_category_array = $category_data->get();
-      
     }
 }

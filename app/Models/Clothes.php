@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Collection;
 use App\Http\Controllers\CP2Controllers;
-use App\Http\Requests\CP2Request;
+use Illuminate\Support\Facades\DB;
 
 class Clothes extends Model
 {
@@ -43,77 +43,46 @@ class Clothes extends Model
         return $this->belongsTo(Rating_Detail::class);
     }
     
-    public function select(Proposal $proposal, Select_Category $select_category)
-    {
-       $n_checkbox = count($checkbox_array);
-       
-       $ca_budget =  $budget / $n_checkbox;
-       
-       $collection = $result_category_array;
-       
-       $select_array = [];
-       
-       $average_price = Clothes::select('category_id')
-                        ->selectRaw('AVG(price as a_price')
-                        ->groupBy('category_id')
-                        ->get();
-                        
-                        
-        foreach ($collection as $v){ 
-            if ($average_price < $ca_budget and $v['price'] < $ca_budget){ 
-            $select_array = $v ;   
-            }elseif($average_price > $ca_budget){ 
-                $ca_budget = $average_price; 
-                if($v['price'] < $ca_budget){ 
-                    $select_array = $v; 
-                } 
-            
-            }
-            
-        }
-       $result_selected_array = [];
-       
-       $result_selected_array  = $select_array;
-        
-    }
-     
-    public function rated(Select $select)
+    public function rated()
      {
-         
-      function array_group_by(array $categories, $keyName)
-      {
-        $groups = [];
-        foreach ($categories as $category) {
-        $key = $category[$keyName];
-        if (array_key_exists($key, $groups)) {
-            $groups[$key][] = $category;
-        } else {
-            $groups[$key] = [$category];
-        }
-        }
-          return $groups;
-      }
-       assert(array_group_by($result_selected_array, 'category') === $grouped);
+    //   function array_group_by(array $categories, $keyName)
+    //   {
+    //     $groups = [];
+    //     foreach ($categories as $category) {
+    //     $key = $category[$ke];
+    //     if (array_key_exists($key, $groups)) {
+    //         $groups[$key][] = $category;
+    //     } else {
+    //         $groups[$key] = [$category];
+    //     }
+    //     }
+    //       return $groups;
+    //   }   
+    //   assert(array_group_by($result_selected_array, 'category') === $grouped);
       
-       $groups_array = $grouped->toArray();
+    //   $groups_array = $grouped->toArray();
+    
        
-       $ratings = array_column($groups_array, 'customer_rate');
+      
        
-       $rated_array = array_multisort($ratings,SORT_DESC,$groups_array);
+      $rated_array = array_multisort($ratings,SORT_DESC,$groups_array);
        
-       $proposal_groups = [];
+      $proposal_groups = [];
        
         foreach ($rated_array as $key=>$v){
             $proposal_groups = $v['category_id']->array_shift();
+        
+    
+            
         }
-
+         
      }
-       
-   public function repeat(Select_Category $select_category,Select $select,Rated $rated)
+     
+     public function repeat()
     {
         while ( $budget  > 0 and $ratings_result === $n_checkbox)
         {
-            $this->select_category();
+            
             $this->selected();
             $this->rated();
         }
