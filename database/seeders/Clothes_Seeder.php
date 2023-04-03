@@ -22,7 +22,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450198-000/01?colorDisplayCode=27&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 1,
+                'customer_rate' => '4.59',
                 
                 
          ]);
@@ -34,7 +34,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450195-000/01?colorDisplayCode=26&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 2,
+                'customer_rate' => '4.47',
                 
          ]);
          
@@ -45,7 +45,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449632-000/01?colorDisplayCode=32&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 3,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -56,7 +56,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E451702-000/00?colorDisplayCode=24&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 4,
+                'customer_rate' => '4.43',
                 
          ]);
          
@@ -67,7 +67,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449628-000/00?colorDisplayCode=08&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 5,
+                'customer_rate' => '4.56',
                 
          ]);
          
@@ -78,7 +78,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444550-000/00?colorDisplayCode=03&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 6,
+                'customer_rate' => '4.35',
                 
          ]);
          
@@ -89,7 +89,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449614-000/00?colorDisplayCode=09&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 7,
+                'customer_rate' => '4.52',
                 
          ]);
          
@@ -100,7 +100,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449616-000/00?colorDisplayCode=65&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 8,
+                'customer_rate' => '4.68',
                 
          ]);
          
@@ -111,7 +111,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449629-000/00?colorDisplayCode=57&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 9,
+                'customer_rate' => '4.23',
                 
          ]);
          
@@ -122,7 +122,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457986-000/00?colorDisplayCode=12&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 1,
-                'rating_detail_id' => 10,
+                'customer_rate' => '4.27',
          ]);
          
          DB::table('clothes')->insert([
@@ -132,7 +132,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450543-000/00?colorDisplayCode=32&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 11,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -143,7 +143,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455402-000/00?colorDisplayCode=09&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 12,
+                'customer_rate' => '4.55',
                 
          ]);
          
@@ -154,7 +154,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455396-000/00?colorDisplayCode=30&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 13,
+                'customer_rate' => '4.44',
                 
          ]);
          
@@ -165,7 +165,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E453763-000/00?colorDisplayCode=09&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 14,
+                'customer_rate' => '4.56',
                 
          ]);
          
@@ -176,7 +176,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E453761-000/00?colorDisplayCode=02&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 15,
+                'customer_rate' => '4.43',
                 
          ]);
          
@@ -187,8 +187,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E453613-000/00?colorDisplayCode=02&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 16,
-                
+                'customer_rate' => '4.46',
          ]);
          
          DB::table('clothes')->insert([
@@ -198,8 +197,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456971-000/00?rrec=true&colorDisplayCode=08&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 17,
-                
+                'customer_rate' => '4.28',
          ]);
          
          DB::table('clothes')->insert([
@@ -209,7 +207,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450189-000/00?colorDisplayCode=68&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 18,
+                'customer_rate' => '4.36',
                 
          ]);
          
@@ -220,7 +218,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444967-000/00?colorDisplayCode=76&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 19,
+                'customer_rate' => '4.59',
                 
          ]);
          
@@ -231,7 +229,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E429183-000/00?colorDisplayCode=58&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 20,
+                'customer_rate' => '4.45',
                 
          ]);
          
@@ -242,7 +240,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458468-000/00?colorDisplayCode=01&sizeDisplayCode=005',
                 'category_id' => 2,
                 'gender_id' => 1,
-                'rating_detail_id' => 21,
+                'customer_rate' => '4.79',
                 
          ]);
          
@@ -253,7 +251,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455978-000/00?colorDisplayCode=79&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 22,
+                'customer_rate' => '4.47',
                 
          ]);
          
@@ -264,7 +262,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457425-000/00?colorDisplayCode=00&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 23,
+                'customer_rate' => '4.43',
                 
          ]);
          
@@ -275,7 +273,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457426-000/00?colorDisplayCode=01&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 24,
+                'customer_rate' => '4.51',
                 
          ]);
          
@@ -286,7 +284,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450267-000/00?colorDisplayCode=67&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 25,
+                'customer_rate' => '4.08',
                 
          ]);
          
@@ -297,7 +295,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450259-000/00?colorDisplayCode=64&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 26,
+                'customer_rate' => '4.24',
                 
          ]);
          
@@ -308,7 +306,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444645-000/00?colorDisplayCode=56&sizeDisplayCode=005',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 27,
+                'customer_rate' => '4.28',
                 
          ]);
          
@@ -319,7 +317,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444641-000/00?colorDisplayCode=52&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 28,
+                'customer_rate' => '4.33',
                 
          ]);
          
@@ -330,7 +328,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444754-000/00?colorDisplayCode=69&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 29,
+                'customer_rate' => '4.49',
                 
          ]);
          
@@ -341,7 +339,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E452479-000/00?colorDisplayCode=65&sizeDisplayCode=005',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 30,
+                'customer_rate' => '4.55',
                 
          ]);
          
@@ -352,7 +350,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455962-000/00?colorDisplayCode=40&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 1,
-                'rating_detail_id' => 31,
+                'customer_rate' => '4.56',
                 
          ]);
          
@@ -363,7 +361,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444598-000/00?colorDisplayCode=09&sizeDisplayCode=005',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 32,
+                'customer_rate' => '4.42',
                 
          ]);
          
@@ -374,7 +372,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455480-000/00?colorDisplayCode=61&sizeDisplayCode=030',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 33,
+                'customer_rate' => '4.46',
                 
          ]);
          
@@ -385,7 +383,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E461614-000/00?colorDisplayCode=32&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 34,
+                'customer_rate' => '4.66',
                 
          ]);
          
@@ -396,7 +394,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447780-000/00?colorDisplayCode=05&sizeDisplayCode=076&pldDisplayCode=076',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 35,
+                'customer_rate' => '4.61',
                 
          ]);
          
@@ -407,8 +405,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E448595-000/00?colorDisplayCode=03&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 36,
-                
+                'customer_rate' => '4.50',
          ]);
          
          DB::table('clothes')->insert([
@@ -418,7 +415,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444591-000/00?colorDisplayCode=62&sizeDisplayCode=030',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 37,
+                'customer_rate' => '4.52',
                 
          ]);
          
@@ -429,7 +426,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457209-000/00?colorDisplayCode=57&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 38,
+                'customer_rate' => '4.58',
                 
          ]);
          
@@ -440,7 +437,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450242-000/00?colorDisplayCode=68&sizeDisplayCode=029',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 39,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -451,7 +448,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456352-000/00?colorDisplayCode=68&sizeDisplayCode=005',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 40,
+                'customer_rate' => '4.44',
                 
          ]);
          
@@ -462,7 +459,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E422373-000/00?colorDisplayCode=69&sizeDisplayCode=076&pldDisplayCode=085',
                 'category_id' => 5,
                 'gender_id' => 1,
-                'rating_detail_id' => 41,
+                'customer_rate' => '4.43',
                 
          ]);
          
@@ -473,7 +470,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450198-000/01?colorDisplayCode=27&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 42,
+                'customer_rate' => '4.54',
                 
          ]);
          
@@ -484,7 +481,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450195-000/01?colorDisplayCode=26&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 43,
+                'customer_rate' => '4.41',
                 
          ]);
          
@@ -495,7 +492,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450534-000/00?colorDisplayCode=32&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 44,
+                'customer_rate' => '4.44',
                 
          ]);
          
@@ -506,7 +503,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455944-000/00?colorDisplayCode=16&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 45,
+                'customer_rate' => '4.52',
                 
          ]);
          
@@ -517,7 +514,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E445003-000/00?colorDisplayCode=03&sizeDisplayCode=004',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 46,
+                'customer_rate' => '4.49',
                 
          ]);
          
@@ -528,7 +525,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450314-000/01?colorDisplayCode=19&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 47,
+                'customer_rate' => '4.03',
                 
          ]);
          
@@ -539,7 +536,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E454761-000/00?colorDisplayCode=63&sizeDisplayCode=005',
                 'category_id' => 1,
                 'gender_id' => 2,
-                'rating_detail_id' => 48,
+                'customer_rate' => '4.47',
                 
          ]);
          
@@ -550,7 +547,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450635-000/00?colorDisplayCode=52&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 49,
+                'customer_rate' => '4.56',
                 
          ]);
          
@@ -561,7 +558,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458006-000/00?colorDisplayCode=30&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 50,
+                'customer_rate' => '4.38',
                 
          ]);
          
@@ -572,7 +569,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457506-000/00?colorDisplayCode=40&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 51,
+                'customer_rate' => '4.21',
                 
          ]);
          
@@ -583,7 +580,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E446845-000/00?colorDisplayCode=70&sizeDisplayCode=005',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 52,
+                'customer_rate' => '4.34',
                 
          ]);
          
@@ -594,7 +591,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E454766-000/00?colorDisplayCode=07&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 53,
+                'customer_rate' => '4.68',
                 
          ]);
          
@@ -605,7 +602,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458261-000/00?colorDisplayCode=54&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 54,
+                'customer_rate' => '4.49',
                 
          ]);
          
@@ -616,7 +613,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456158-000/00?colorDisplayCode=01&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 55,
+                'customer_rate' => '4.41',
                 
          ]);
          
@@ -627,7 +624,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E454754-000/00?colorDisplayCode=61&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 56,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -638,7 +635,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E451686-000/00?colorDisplayCode=01&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 57,
+                'customer_rate' => '4.79',
                 
          ]);
          
@@ -649,7 +646,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E445192-000/00?colorDisplayCode=01&sizeDisplayCode=004',
                 'category_id' => 2,
                 'gender_id' => 2,
-                'rating_detail_id' => 58,
+                'customer_rate' => '4.50',
                 
          ]);
          
@@ -660,7 +657,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458546-000/00?colorDisplayCode=64&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 59,
+                'customer_rate' => '4.55',
                 
          ]);
          
@@ -671,7 +668,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457503-000/00?colorDisplayCode=11&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 60,
+                'customer_rate' => '4.45',
                 
          ]);
          
@@ -682,7 +679,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E446846-000/00?colorDisplayCode=04&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 61,
+                'customer_rate' => '4.06',
                 
          ]);
          
@@ -693,7 +690,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E452682-000/00?colorDisplayCode=32&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 62,
+                'customer_rate' => '4.26',
                 
          ]);
          
@@ -704,7 +701,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E445455-000/00?colorDisplayCode=33&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 63,
+                'customer_rate' => '4.17',
                 
          ]);
          
@@ -715,7 +712,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E457505-000/00?colorDisplayCode=30&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 64,
+                'customer_rate' => '4.56',
                 
          ]);
          
@@ -726,7 +723,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E418409-000/00?colorDisplayCode=00&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 65,
+                'customer_rate' => '3.78',
                 
          ]);
          
@@ -737,8 +734,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E433604-000/00?colorDisplayCode=71&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 66,
-                
+                'customer_rate' => '4.23',
          ]);
          
          DB::table('clothes')->insert([
@@ -748,7 +744,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447814-000/00?colorDisplayCode=31&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 67,
+                'customer_rate' => '4.48',
                 
          ]);
          
@@ -759,7 +755,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444645-000/01?colorDisplayCode=56&sizeDisplayCode=004',
                 'category_id' => 3,
                 'gender_id' => 2,
-                'rating_detail_id' => 68,
+                'customer_rate' => '4.47',
                 
          ]);
          
@@ -770,7 +766,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447085-000/00?colorDisplayCode=58&sizeDisplayCode=005',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 69,
+                'customer_rate' => '4.41',
                 
          ]);
          
@@ -781,7 +777,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447376-000/00?colorDisplayCode=09&sizeDisplayCode=005',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 70,
+                'customer_rate' => '4.46',
                 
          ]);
          
@@ -792,7 +788,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E452073-000/00?colorDisplayCode=08&sizeDisplayCode=005',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 71,
+                'customer_rate' => '4.32',
          ]);
          
          DB::table('clothes')->insert([
@@ -802,7 +798,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447080-000/00?colorDisplayCode=38&sizeDisplayCode=004',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 72,
+                'customer_rate' => '4.36',
                 
          ]);
          
@@ -813,7 +809,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E451753-000/00?colorDisplayCode=53&sizeDisplayCode=005',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 73,
+                'customer_rate' => '4.22',
                 
          ]);
          
@@ -824,7 +820,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E452732-000/00?colorDisplayCode=08&sizeDisplayCode=004',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 74,
+                'customer_rate' => '4.27',
          ]);
          
          DB::table('clothes')->insert([
@@ -834,7 +830,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455754-000/00?colorDisplayCode=00&sizeDisplayCode=004',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 75,
+                'customer_rate' => '4.36',
                 
          ]);
          
@@ -845,7 +841,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E447081-000/00?colorDisplayCode=08&sizeDisplayCode=004',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 76,
+                'customer_rate' => '4.69',
                 
          ]);
          
@@ -856,7 +852,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455793-000/00?colorDisplayCode=69&sizeDisplayCode=004',
                 'category_id' => 4,
                 'gender_id' => 2,
-                'rating_detail_id' => 77,
+                'customer_rate' => '4.63',
          ]);
          
          DB::table('clothes')->insert([
@@ -866,7 +862,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E443906-000/00?colorDisplayCode=64&sizeDisplayCode=002',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 78,
+                'customer_rate' => '4.51',
                 
          ]);
          
@@ -877,7 +873,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E449266-000/00?colorDisplayCode=64&sizeDisplayCode=023',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 79,
+                'customer_rate' => '4.52',
                 
                 
          ]);
@@ -889,7 +885,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450608-000/00?colorDisplayCode=02&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 80,
+                'customer_rate' => '4.53',
                 
          ]);
          
@@ -900,7 +896,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E444591-000/00?colorDisplayCode=62&sizeDisplayCode=030',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 81,
+                'customer_rate' => '4.54',
                 
          ]);
          
@@ -911,7 +907,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E446807-000/00?colorDisplayCode=08&sizeDisplayCode=023',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 82,
+                'customer_rate' => '4.55',
                 
          ]);
          
@@ -922,7 +918,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456193-000/00?colorDisplayCode=08&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 83,
+                'customer_rate' => '4.56',
          ]);
          
          DB::table('clothes')->insert([
@@ -932,7 +928,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450639-000/00?colorDisplayCode=39&sizeDisplayCode=005',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 84,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -943,7 +939,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E445294-000/01?colorDisplayCode=34&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 85,
+                'customer_rate' => '4.25',
          ]);
          
          DB::table('clothes')->insert([
@@ -953,7 +949,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E433737-000/00?colorDisplayCode=69&sizeDisplayCode=004',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 86,
+                'customer_rate' => '4.55',
          ]);
          
          DB::table('clothes')->insert([
@@ -963,7 +959,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E451193-000/00?colorDisplayCode=10&sizeDisplayCode=023',
                 'category_id' => 5,
                 'gender_id' => 2,
-                'rating_detail_id' => 87,
+                'customer_rate' => '4.57',
                 
          ]);
          
@@ -974,7 +970,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456036-000/00?colorDisplayCode=68&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 88,
+                'customer_rate' => '4.51',
                 
          ]);
          
@@ -985,7 +981,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E455663-000/00?colorDisplayCode=59&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 89,
+                'customer_rate' => '3.86',
                 
          ]);
          
@@ -996,7 +992,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E450645-000/00?colorDisplayCode=66&sizeDisplayCode=061',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 90,
+                'customer_rate' => '4.35',
          ]);
          
          DB::table('clothes')->insert([
@@ -1006,7 +1002,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E445974-000/00?colorDisplayCode=55&sizeDisplayCode=005',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 91,
+                'customer_rate' => '4.59',
                 
          ]);
          
@@ -1017,7 +1013,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E454756-000/00?colorDisplayCode=31&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 92,
+                'customer_rate' => '4.27',
                 
          ]);
          
@@ -1028,7 +1024,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E456094-000/00?colorDisplayCode=11&sizeDisplayCode=061',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 93,
+                'customer_rate' => '4.43',
                 
          ]);
          
@@ -1039,7 +1035,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458623-000/00?colorDisplayCode=54&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 94,
+                'customer_rate' => '4.01',
                 
          ]);
          
@@ -1050,7 +1046,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458287-000/00?colorDisplayCode=09&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 95,
+                'customer_rate' => '4.22',
                 
          ]);
          
@@ -1061,7 +1057,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E458624-000/00?colorDisplayCode=54&sizeDisplayCode=004',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 96,
+                'customer_rate' => '4.49',
                 
          ]);
          
@@ -1072,7 +1068,7 @@ class Clothes_Seeder extends Seeder
                 'url' => 'https://www.uniqlo.com/jp/ja/products/E429145-000/00?colorDisplayCode=69&sizeDisplayCode=061',
                 'category_id' => 6,
                 'gender_id' => 2,
-                'rating_detail_id' => 97,
+                'customer_rate' => '4.12',
                 
          ]);
     }

@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Coordination Proposal 2 </title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    </head>
+    <x-app-layout>
+       
     <body class="antialiased">
-        <div>さん</div>
-        <h1>一緒に服選びしてみませんか？</h1>
-          <form action="/cp2/proposal" method='POST'>
+        <div class = "text-left not-italic text-xl ml-20">
+            {{ Auth::user()->name }}さん
+        </div>
+        <h1 class="text-center not-italic text-4xl font-bold">一緒に服選びしてみませんか？</h1>
+          <form action="/proposal" method='POST'>
               @csrf
-            <h2>カテゴリを選択してください</h2>
+            <h2 class = "text-2xl mt-8 ml-20">カテゴリを選択してください</h2>
             @foreach ($categories as $category)
-            <div class="form-check">
+            <div class="form-check  text-4xl font-medium mt-2 ml-20  justify-between items-center ">
             <input name="checkbox_array[]" 
                    type="checkbox" 
                    value="{{ $category->id }}" 
@@ -22,14 +17,20 @@
             <label class="form-check-label">{{ $category->name }}</label>
             </div>
             @endforeach
-            <h2>予算を入力してください</h2>
-           
-                予算:<br>
+            @foreach($prices as $price)
+            <
+            <h2 class = "text-center text-2xl mt-5 ">予算を入力してください</h2>
+            <div class = "flex w-60 mx-auto">
                 <input name='budget'>
-                <br>
-                <input type='submit' value='検索'>
-                <a href='/cp2/proposal'></a>
-                <!--<button href='/cp2/proposal'>検索</button>-->
-            </form>
+                <div class = "text-2xl font-normal">
+                    円
+                </div>
+                    <div class = "text-xl bg-blue-400 w-12 font-semibold rounded ">
+                       <input type='submit' value='検索'>
+                       <a href='/proposal'></a>
+                    </div>
+            </div>
+          </form>
     </body>
 </html>
+</x-app-layout>

@@ -15,12 +15,16 @@ use Illuminate\Support\Facades\Validator;
 
 class CP2Controller extends Controller
 {
-    public function front(Category $category)
+    public function front(Category $category,Clothes $clothes)
     {
-       return view('/cp2/front')->with(['categories' =>$category->get()]);
+       $price = 
+       return view('/cp2/front')->with([
+           'categories' => $category->get(),
+           'prices' => $price->get()
+           ]);
     }
     
-    public function proposal(Clothes $clothes ,Request $request)
+    public function proposal(Clothes $clothes,Category $category,Request $request)
     {
         //リクエストパラメータで入力値を受け取る
         $checkbox_array = $request->input('checkbox_array');
@@ -45,11 +49,18 @@ class CP2Controller extends Controller
         $selected_array =[];
         foreach($collection as $cloth_content){
             foreach($keys as $key => $ca){
-                if(($cloth_content->category_id === $ca) and ($ca_budget > $cloth_content->price)){
+                if(($cloth_content->category_id == $ca) and ($ca_budget > $cloth_content->price)){
                    array_push($selected_array,$cloth_content);
                 }
             }
          } 
+         
+        //お客様評価を基に降順にソート
+        $customer_rate = [];
+        foreach($selected_array as $selected_single => $v){
+            $customer_rate[$selected_single] = $v->customer_rate;
+        }
+        array_multisort($customer_rate,SORT_NUMERIC,SORT_DESC,$selected_array);
          
         //カテゴリーごとに配列を分割
         $groups = [];
@@ -59,64 +70,25 @@ class CP2Controller extends Controller
             });
             array_push($groups,$tmp);
         }
-        // foreach($groups as $group){
-        //     $group->with('rating_details');
-        // }
         
-        //お客様評価を基に降順にソート
-        $ratings = DB::table('rating_details');
-        foreach($groups as $group => $single['id']){
-            $ratings = $ratings->orwhere('clothes_id',$single['id']);
+        //各カテゴリ毎に１商品
+        $results = [];
+        foreach($groups as $group){
+            $first = array_values($group)[0];
+            array_push($results,$first);
         }
-        dd($ratings);
-        $rating_array = $ratings->get();
-        // $result = [];
-        // $result = array_multisort($ratings,SORT_DESC,);
-    
-      
-      
-        //  return view('/cp2/proposal') ->with([
-        //      'clothes' => $clothes->get(),
-        //      'budget'  => $budget,
-        //      ]);
-    
-    
-       
-    //   $one_category_avg = [];
-    //   for($i = 0 ; $i < count($keys) ; $i++){
-    //       array_push($one_category_avg,$average_list[$keys[$i]]);
-    //   }
-    //   $ca_id = array_column($collection,'category_id');
-    //   $cloth_price = array_column($collection,'price');
-    
-    //   foreach($collection as $cloth_content){
-    //       foreach($average_list as $one_category_id => $one_category_avg)
-    //       //dump($one_category_avg);
-    //         if(($cloth_content->category_id === $one_category_id) and ($ca_budget > $one_category_avg) and ($ca_budget > $cloth_content->price)){
-    //             array_push($selected_array,$cloth_content);
-    //              //dump($selected_array);
-    //         }elseif(($cloth_content->category_id === $one_category_id) and ($ca_budget < $one_category_avg)){
-    //             $ca_budget = $one_category_avg;
-    //             if($ca_budget > $cloth_content->price){
-    //                 array_push($selected_array,$cloth_content);
-    //             }
-    //             $n_checkbox = $n_checkbox -1;
-    //             $ca_budget = $budget - $ca_budget / $n_checkbox;
-    //         }
-    //   } 
-
-    //  $validator = Validator::make($request->all(), $request);
         
-        //   if ($validator->fails()) {
-        //     return redirect('/cp2/front')
-        //                 ->withErrors($validator)
-        //                 ->withInput();
-        // };
+        return view('/cp2/proposal')->with([
+             'results' => $results,
+             'budget' => $budget,
+             'clothes' => $clothes,
+             ]);
         
-    // public function store(Post $post, Proposal $proposal)
-    // {
-    //     return view('/cp2/proposal/{{post}}')->with('proposal');
-    // }
+    }
+    public function store(Post $post, Proposal $proposal)
+    {
+        return view('/cp2/proposal/{{post}}')->with('proposal');
+    }
     
-    }   
+     
 }
