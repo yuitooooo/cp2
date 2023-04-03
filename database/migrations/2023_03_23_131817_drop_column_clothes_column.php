@@ -13,13 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('rating_details', function (Blueprint $table) {
-            $table->id();
-            $table->float('customer_rate',2,1);
-            $table->integer('number_review')->nullable();
-            $table->integer('hot_selling')->nullable();
-            $table->integer('favorite')->nullable();
-            
+        Schema::table('clothes', function (Blueprint $table) {
+            $table->dropColumn('category_id');
         });
     }
 
@@ -30,6 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rating_details');
+        Schema::table('clothes', function (Blueprint $table) {
+            $table->foreignId('category_id')->constrained(); 
+        });
     }
 };

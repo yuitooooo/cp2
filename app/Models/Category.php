@@ -20,4 +20,9 @@ class Category extends Model
     {
         return $this->hasMany(Clothes::class);
     }
+    
+    public function price_avg()
+    {
+        return $this->clothes()->with('category')->avg('price');
+    }
 }

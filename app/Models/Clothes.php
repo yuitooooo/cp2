@@ -42,56 +42,10 @@ class Clothes extends Model
     {
         return $this->belongsTo(Rating_Detail::class);
     }
-    
-    public function rated()
-     {
-    //   function array_group_by(array $categories, $keyName)
-    //   {
-    //     $groups = [];
-    //     foreach ($categories as $category) {
-    //     $key = $category[$ke];
-    //     if (array_key_exists($key, $groups)) {
-    //         $groups[$key][] = $category;
-    //     } else {
-    //         $groups[$key] = [$category];
-    //     }
-    //     }
-    //       return $groups;
-    //   }   
-    //   assert(array_group_by($result_selected_array, 'category') === $grouped);
-      
-    //   $groups_array = $grouped->toArray();
-    
-       
-      
-       
-      $rated_array = array_multisort($ratings,SORT_DESC,$groups_array);
-       
-      $proposal_groups = [];
-       
-        foreach ($rated_array as $key=>$v){
-            $proposal_groups = $v['category_id']->array_shift();
-        
-    
-            
-        }
-         
-     }
-     
-     public function repeat()
+    public function price_avg()
     {
-        while ( $budget  > 0 and $ratings_result === $n_checkbox)
-        {
-            
-            $this->selected();
-            $this->rated();
-        }
-        
-        return $this->$proposal_groups;
-        
+        return $this->category()->with('clothes')->avg('price');
     }
-     
-     
 }   
        
        
