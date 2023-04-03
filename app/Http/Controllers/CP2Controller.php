@@ -17,10 +17,8 @@ class CP2Controller extends Controller
 {
     public function front(Category $category,Clothes $clothes)
     {
-       $price = 
        return view('/cp2/front')->with([
-           'categories' => $category->get(),
-           'prices' => $price->get()
+           'categories' => $category->get()
            ]);
     }
     
