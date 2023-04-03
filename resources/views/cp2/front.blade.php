@@ -17,8 +17,6 @@
             <label class="form-check-label">{{ $category->name }}</label>
             </div>
             @endforeach
-            @foreach($prices as $price)
-            <
             <h2 class = "text-center text-2xl mt-5 ">予算を入力してください</h2>
             <div class = "flex w-60 mx-auto">
                 <input name='budget'>
