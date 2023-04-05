@@ -7,7 +7,7 @@
         <h1 class="text-center not-italic text-4xl font-bold">一緒に服選びしてみませんか？</h1>
           <form action="/proposal" method='POST'>
               @csrf
-            <h2 class = "text-2xl mt-8 ml-20">カテゴリを選択してください</h2>
+            <h2 class = "text-2xl mt-6 ml-20">カテゴリを選択してください</h2>
             @foreach ($categories as $category)
             <div class="form-check  text-4xl font-medium mt-2 ml-20  justify-between items-center ">
             <input name="checkbox_array[]" 
@@ -17,7 +17,7 @@
             <label class="form-check-label">{{ $category->name }}</label>
             </div>
             @endforeach
-            <h2 class = "text-center text-2xl mt-5 ">予算を入力してください</h2>
+            <h2 class = "text-center text-2xl mt-3 ">予算を入力してください</h2>
             <div class = "flex w-60 mx-auto">
                 <input name='budget'>
                 <div class = "text-2xl font-normal">
