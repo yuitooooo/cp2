@@ -6,6 +6,7 @@ use App\Http\Controllers\CP2Controller;
 use Illuminate\Http\Request;
 
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -25,6 +26,8 @@ Route::middleware(['auth'])->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+//Route::get('guest', 'Auth\LoginController@guestLogin')->name('login.guest');
 
 Route::controller(CP2Controller::class)->middleware(['auth'])->group(function(){
     Route::get('/proposal','proposal')->name('proposal');
