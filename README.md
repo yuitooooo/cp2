@@ -15,7 +15,9 @@
 - PHP 8.0.26
 - Laravel 9.50.1
 - MariaDB 10.2.38
-- AWS
+- AWS <br>
+ - EC2
+ - Cloud9
 
 # 機能一覧
 - ユーザー登録、ログイン機能
